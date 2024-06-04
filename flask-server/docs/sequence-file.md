@@ -11,7 +11,7 @@
 {
   "file":"[uploaded FASTA file]",
   "json":{
-    "aminoacids": "[list of amino acids to scan for, subset of ["S", "T", "Y", "H"]]",
+    "aminoacids": "[list of amino acids to scan for, subset of ['S', 'T', 'Y', 'H']]",
     "omitErrors":false
   }
 }

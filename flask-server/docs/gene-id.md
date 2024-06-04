@@ -19,7 +19,7 @@
       "positions":[]
     },
   ],
-  "omitErrors":<true/false>
+  "omitErrors": false
 }
 ```
 
