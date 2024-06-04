@@ -50,7 +50,7 @@ def create_app():
                 error= 'invalid_id_pos'), 400
         
         if len(test_data) == 0:
-            return flask.json.jsonify(error= 'empty-test-data'), 400
+            return flask.json.jsonify(error= 'empty_test_data'), 400
 
         test_data_filename = data_utils.write_test_data(test_data)
         results = model.run(test_data_filename)
@@ -100,7 +100,7 @@ def create_app():
         if not omit_errors and len(short_seq_ids) > 0:
             return flask.json.jsonify(
                 invalid_ids= short_seq_ids,
-                error= 'short-seq'), 400
+                error= 'short_seq'), 400
 
         if len(fasta_records) == 0:
             return flask.json.jsonify(
@@ -112,7 +112,7 @@ def create_app():
                 error= 'invalid_aa_seq'), 400
         
         if len(test_data) == 0:
-            return flask.json.jsonify(error= 'no-site'), 400
+            return flask.json.jsonify(error= 'no_site'), 400
         
 
         test_data_filename = data_utils.write_test_data(test_data)

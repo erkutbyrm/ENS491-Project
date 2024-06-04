@@ -382,7 +382,7 @@ MATQADLMELDMAMEPDRKAAVSHWQQQSYLDSGIHSGATTTAPSLSGKGNPEEEDVDTSQVLYEWEQGFSQSFTQEQVA
             }
 
             break;
-          case "empty-test-data":
+          case "empty_test_data":
             enableErrorMessage("Input data is empty. This may have caused by omitted input(s).");
             break;
 
@@ -474,13 +474,13 @@ MATQADLMELDMAMEPDRKAAVSHWQQQSYLDSGIHSGATTTAPSLSGKGNPEEEDVDTSQVLYEWEQGFSQSFTQEQVA
               );
               break;
 
-            case "no-site":
+            case "no_site":
               enableErrorMessage(
                 "There is no site with selected amino acid(s)."
               );
               break;
 
-            case "short-seq":
+            case "short_seq":
               if (result["invalid_ids"].length > 2) {
                 enableErrorMessage(
                   "Protein sequences should consist of at least 10 amino acids. Please check: " +
@@ -576,13 +576,13 @@ MATQADLMELDMAMEPDRKAAVSHWQQQSYLDSGIHSGATTTAPSLSGKGNPEEEDVDTSQVLYEWEQGFSQSFTQEQVA
               );
               break;
 
-            case "no-site":
+            case "no_site":
               enableErrorMessage(
                 "There is no site with selected amino acid(s)."
               );
               break;
 
-            case "short-seq":
+            case "short_seq":
               if (result["invalid_ids"].length > 2) {
                 enableErrorMessage(
                   "Protein sequences should consist of at least 10 amino acids. Please check: " +
@@ -715,40 +715,40 @@ MATQADLMELDMAMEPDRKAAVSHWQQQSYLDSGIHSGATTTAPSLSGKGNPEEEDVDTSQVLYEWEQGFSQSFTQEQVA
         )}
         {activeTab === 3 && (
           <Col>
-            <Row style={{marginTop: "30px"}}>
-                <LabelCentered>Upload <br/> Fasta File</LabelCentered>
+            <Row style={{ marginTop: "30px" }}>
+              <LabelCentered>Upload <br /> Fasta File</LabelCentered>
 
-                <FileUploadContainer>
-                  <UploadButton onClick={handleFileUpload}>
-                    Select File
-                    <input
-                      type="file"
-                      accept=".fasta"
-                      ref={hiddenFileInput}
-                      onChange={handleFileChange}
-                      style={{ display: "none" }}
-                    />
-                  </UploadButton>
-                  <UploadedFileName>
-                    {uploadedFile ? uploadedFile.name : ""}
-                  </UploadedFileName>
-                </FileUploadContainer>
-              </Row>
-              <Row>
-                <ScanCheckboxGroup />
-              </Row>
-              <Row>
-                <PredictButton
-                  onClick={handlePredictLoadedFile}
-                  disabled={isPredicting}
-                >
-                  {isPredicting ? (
-                    <PulseLoader color="hsla(168, 0%, 100%, 1)" size={8} />
-                  ) : (
-                    "Predict"
-                  )}
-                </PredictButton>
-              </Row>
+              <FileUploadContainer>
+                <UploadButton onClick={handleFileUpload}>
+                  Select File
+                  <input
+                    type="file"
+                    accept=".fasta"
+                    ref={hiddenFileInput}
+                    onChange={handleFileChange}
+                    style={{ display: "none" }}
+                  />
+                </UploadButton>
+                <UploadedFileName>
+                  {uploadedFile ? uploadedFile.name : ""}
+                </UploadedFileName>
+              </FileUploadContainer>
+            </Row>
+            <Row>
+              <ScanCheckboxGroup />
+            </Row>
+            <Row>
+              <PredictButton
+                onClick={handlePredictLoadedFile}
+                disabled={isPredicting}
+              >
+                {isPredicting ? (
+                  <PulseLoader color="hsla(168, 0%, 100%, 1)" size={8} />
+                ) : (
+                  "Predict"
+                )}
+              </PredictButton>
+            </Row>
           </Col>
         )}
       </ContentArea>
