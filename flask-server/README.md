@@ -26,9 +26,9 @@ flask --app server --debug run
 - [Prediction with FASTA string](docs/sequence-string.md): `POST /api/predict/sequence-string`
 
 
-## Updating DistilProtBert checkpoints
-- Place the new checkpoints into model/checkpoints/distilprotbert_models/distilprotbert
-- Update the config file (model/configs/distilprotbert_model.yaml) without the extension or any preceding path. For example:
+## Adding/Updating DistilProtBert checkpoints
+- Place the new checkpoints into `model/checkpoints/distilprotbert_models/distilprotbert/` (if the directory does not exist, create a new folder)
+- Update the config file (`model/configs/distilprotbert_model.yaml`) to match the name of the new checkpoint. For example:
   ```yaml
   testing:
   ...
