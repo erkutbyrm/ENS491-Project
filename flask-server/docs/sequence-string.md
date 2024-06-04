@@ -9,9 +9,9 @@
 **Content-Type** : JSON
 ```json
 {
-    "fasta": <input string in FASTA format>,
-    "aminoacids": <list of amino acids to scan for, subset of ["S", "T", "Y", "H"]>,
-    "omitErrors":<true/false>
+    "fasta": "[input string in FASTA format]",
+    "aminoacids": "[list of amino acids to scan for, subset of ["S", "T", "Y", "H"]]",
+    "omitErrors": false
 }
 ```
 ## Success Response
@@ -22,17 +22,26 @@
 
 ```json
 {
-    "results": [
-        {
-            "geneId": <ID of query gene>,
-            "position": <position of phosphosite residue>,
-            "proteinSeq": <phosphosite residue ±7 amino acids>,
-            "probKinase": <most probable 5 kinases in descending order with respect to their probabilities>,
-            "probability": <prediction probabilities of the most probable 5 kinases>,
-            "kinaseFamily": <families of the most probable 5 kinases >,
-            "kinaseGroup": <groups of the most probable 5 kinases>
-        }, ...
-    ]
+  "results": [
+    {
+      "geneId": "[ID of query gene 1]",
+      "position": "[position of phosphosite residue]",
+      "proteinSeq": "[phosphosite residue ±7 amino acids]",
+      "probKinase": "[most probable 5 kinases in descending order with respect to their probabilities]",
+      "probability": "[prediction probabilities of the most probable 5 kinases]",
+      "kinaseFamily": "[families of the most probable 5 kinases]",
+      "kinaseGroup": "[groups of the most probable 5 kinases]"
+    },
+    {
+      "geneId": "[ID of query gene 2]",
+      "position": "[position of phosphosite residue]",
+      "proteinSeq": "[phosphosite residue ±7 amino acids]",
+      "probKinase": "[most probable 5 kinases in descending order with respect to their probabilities]",
+      "probability": "[prediction probabilities of the most probable 5 kinases]",
+      "kinaseFamily": "[families of the most probable 5 kinases]",
+      "kinaseGroup": "[groups of the most probable 5 kinases]"
+    }
+  ]
 }
 ```
 
@@ -44,7 +53,7 @@
 **Content**
 ```json
 {
-    "error" = "no_target_selected"
+    "error": "no_target_selected"
 }
 ```
 ---
@@ -55,8 +64,8 @@
 **Content**
 ```json
 {
-    "invalid_ids" = <ids of the short sequences>,
-    "error" = "short_seq"
+    "invalid_ids": "[ids of the short sequences]",
+    "error": "short_seq"
 }
 ```
 ---
@@ -67,7 +76,7 @@
 **Content**
 ```json
 {
-    "error" = "incorrect_format"
+    "error": "incorrect_format"
 }
 ```
 ---
@@ -78,8 +87,8 @@
 **Content**
 ```json
 {
-    "invalid_ids" = <ids of the sequences containing invalid characters>,
-    "error" = "invalid_aa_seq"
+    "invalid_ids": "[ids of the sequences containing invalid characters]",
+    "error": "invalid_aa_seq"
 }
 ```
 ---
@@ -90,7 +99,6 @@
 **Content**
 ```json
 {
-    "error" = "no_site"
+    "error": "no_site"
 }
 ```
----

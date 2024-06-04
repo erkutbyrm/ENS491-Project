@@ -9,10 +9,10 @@
 **Content-Type** : FormData
 ```json
 {
-  "file":<uploaded FASTA file>,
+  "file":"[uploaded FASTA file]",
   "json":{
-    "aminoacids": <list of amino acids to scan for, subset of ["S", "T", "Y", "H"]>,
-    "omitErrors":<true/false>
+    "aminoacids": "[list of amino acids to scan for, subset of ["S", "T", "Y", "H"]]",
+    "omitErrors":false
   }
 }
 ```
@@ -26,17 +26,26 @@ Note that the JSON part of the request is sent in Blob form.
 
 ```json
 {
-    "results": [
-        {
-            "geneId": <ID of query gene>,
-            "position": <position of phosphosite residue>,
-            "proteinSeq": <phosphosite residue ±7 amino acids>,
-            "probKinase": <most probable 5 kinases in descending order with respect to their probabilities>,
-            "probability": <prediction probabilities of the most probable 5 kinases>,
-            "kinaseFamily": <families of the most probable 5 kinases >,
-            "kinaseGroup": <groups of the most probable 5 kinases>
-        }, ...
-    ]
+  "results": [
+    {
+      "geneId": "[ID of query gene 1]",
+      "position": "[position of phosphosite residue]",
+      "proteinSeq": "[phosphosite residue ±7 amino acids]",
+      "probKinase": "[most probable 5 kinases in descending order with respect to their probabilities]",
+      "probability": "[prediction probabilities of the most probable 5 kinases]",
+      "kinaseFamily": "[families of the most probable 5 kinases]",
+      "kinaseGroup": "[groups of the most probable 5 kinases]"
+    },
+    {
+      "geneId": "[ID of query gene 2]",
+      "position": "[position of phosphosite residue]",
+      "proteinSeq": "[phosphosite residue ±7 amino acids]",
+      "probKinase": "[most probable 5 kinases in descending order with respect to their probabilities]",
+      "probability": "[prediction probabilities of the most probable 5 kinases]",
+      "kinaseFamily": "[families of the most probable 5 kinases]",
+      "kinaseGroup": "[groups of the most probable 5 kinases]"
+    }
+  ]
 }
 ```
 
@@ -48,7 +57,7 @@ Note that the JSON part of the request is sent in Blob form.
 **Content**
 ```json
 {
-    "error" = "no_target_selected"
+    "error": "no_target_selected"
 }
 ```
 ---
@@ -59,8 +68,8 @@ Note that the JSON part of the request is sent in Blob form.
 **Content**
 ```json
 {
-    "invalid_ids" = <ids of the short sequences>,
-    "error" = "short_seq"
+    "invalid_ids": "[ids of the short sequences]",
+    "error": "short_seq"
 }
 ```
 ---
@@ -71,7 +80,7 @@ Note that the JSON part of the request is sent in Blob form.
 **Content**
 ```json
 {
-    "error" = "incorrect_format"
+    "error": "incorrect_format"
 }
 ```
 ---
@@ -82,8 +91,8 @@ Note that the JSON part of the request is sent in Blob form.
 **Content**
 ```json
 {
-    "invalid_ids" = <ids of the sequences containing invalid characters>,
-    "error" = "invalid_aa_seq"
+    "invalid_ids": "[ids of the sequences containing invalid characters]",
+    "error": "invalid_aa_seq"
 }
 ```
 ---
@@ -94,7 +103,6 @@ Note that the JSON part of the request is sent in Blob form.
 **Content**
 ```json
 {
-    "error" = "no_site"
+    "error": "no_site"
 }
 ```
----

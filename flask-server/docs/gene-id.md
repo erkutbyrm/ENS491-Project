@@ -11,14 +11,13 @@
 {
   "geneList":[
     {
-      "gene":uniProtId_1,
-      "positions":[position_1,position_2,...]
+      "gene":"[uniProtId_1]",
+      "positions":[13,22]
     },
     {
-      "gene":uniProtId_2,
+      "gene":"[uniProtId_2]",
       "positions":[]
     },
-    ...
   ],
   "omitErrors":<true/false>
 }
@@ -34,14 +33,23 @@
 {
   "results": [
     {
-      "geneId": ID of query gene,
-      "position": position of phosphosite residue,
-      "proteinSeq": phosphosite residue ±7 amino acids,
-      "probKinase": most probable 5 kinases in descending order with respect to their probabilities,
-      "probability": prediction probabilities of the most probable 5 kinases,
-      "kinaseFamily": families of the most probable 5 kinases,
-      "kinaseGroup": groups of the most probable 5 kinases
-    }, ...
+      "geneId": "[ID of query gene 1]",
+      "position": "[position of phosphosite residue]",
+      "proteinSeq": "[phosphosite residue ±7 amino acids]",
+      "probKinase": "[most probable 5 kinases in descending order with respect to their probabilities]",
+      "probability": "[prediction probabilities of the most probable 5 kinases]",
+      "kinaseFamily": "[families of the most probable 5 kinases]",
+      "kinaseGroup": "[groups of the most probable 5 kinases]"
+    },
+    {
+      "geneId": "[ID of query gene 2]",
+      "position": "[position of phosphosite residue]",
+      "proteinSeq": "[phosphosite residue ±7 amino acids]",
+      "probKinase": "[most probable 5 kinases in descending order with respect to their probabilities]",
+      "probability": "[prediction probabilities of the most probable 5 kinases]",
+      "kinaseFamily": "[families of the most probable 5 kinases]",
+      "kinaseGroup": "[groups of the most probable 5 kinases]"
+    }
   ]
 }
 ```
@@ -54,8 +62,8 @@
 **Content**
 ```json
 {
-  "invalid_ids": <invalid_ids>,
-  "invalid_positions": <invalid_positions>,
+  "invalid_ids": "[invalid_ids]",
+  "invalid_positions": "[invalid_positions]",
   "error": "invalid_id_pos"
 }
 ```
