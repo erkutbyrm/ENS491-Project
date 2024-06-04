@@ -11,11 +11,11 @@
 {
   "geneList":[
     {
-      "gene":<uniProtId_1>,
-      "positions":[0,1,2...]
+      "gene":uniProtId_1,
+      "positions":[position_1,position_2,...]
     },
     {
-      "gene":<uniProtId_2>,
+      "gene":uniProtId_2,
       "positions":[]
     },
     ...
@@ -32,17 +32,17 @@
 
 ```json
 {
-    "results": [
-        {
-            "geneId": <ID of query gene>,
-            "position": <position of phosphosite residue>,
-            "proteinSeq": <phosphosite residue ±7 amino acids>,
-            "probKinase": <most probable 5 kinases in descending order with respect to their probabilities>,
-            "probability": <prediction probabilities of the most probable 5 kinases>,
-            "kinaseFamily": <families of the most probable 5 kinases >,
-            "kinaseGroup": <groups of the most probable 5 kinases>
-        }, ...
-    ]
+  "results": [
+    {
+      "geneId": ID of query gene,
+      "position": position of phosphosite residue,
+      "proteinSeq": phosphosite residue ±7 amino acids,
+      "probKinase": most probable 5 kinases in descending order with respect to their probabilities,
+      "probability": prediction probabilities of the most probable 5 kinases,
+      "kinaseFamily": families of the most probable 5 kinases,
+      "kinaseGroup": groups of the most probable 5 kinases
+    }, ...
+  ]
 }
 ```
 
@@ -54,9 +54,9 @@
 **Content**
 ```json
 {
-    "invalid_ids"= <invalid_ids>,
-    "invalid_positions" = <invalid_positions>,
-    "error" = "invalid_id_pos"
+  "invalid_ids": <invalid_ids>,
+  "invalid_positions": <invalid_positions>,
+  "error": "invalid_id_pos"
 }
 ```
 ---
@@ -67,6 +67,6 @@
 **Content**
 ```json
 {
-    "error" = "empty_test_data"
+    "error": "empty_test_data"
 }
 ```
