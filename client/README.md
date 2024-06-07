@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+If the frontend and backend will run on different machines, modify line 233 of `src/pages/Input.jsx` with the appropriate url.
+
 ## Available Scripts
 
 In the project directory, you can run:

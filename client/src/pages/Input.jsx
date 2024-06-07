@@ -230,6 +230,8 @@ const InputPage = () => {
   const [isPredicting, setIsPredicting] = useState(false);
   const [omitErrors, setOmitErrors] = useState(true);
 
+  const baseUrl = "http://127.0.0.1:5000";
+
   const hiddenFileInput = useRef(null);
   const { setOutputData } = useContext(OutputDataContext);
   const geneIDPlaceholderText = `P05198 5 86 91
@@ -326,7 +328,7 @@ MATQADLMELDMAMEPDRKAAVSHWQQQSYLDSGIHSGATTTAPSLSGKGNPEEEDVDTSQVLYEWEQGFSQSFTQEQVA
       geneList.push(obj);
     });
     console.log(geneList)
-    const apiEndpoint = "http://127.0.0.1:5000/api/predict/gene-id";
+    const apiEndpoint = baseUrl + "/api/predict/gene-id";
 
     try {
       const response = await fetch(apiEndpoint, {
@@ -427,7 +429,7 @@ MATQADLMELDMAMEPDRKAAVSHWQQQSYLDSGIHSGATTTAPSLSGKGNPEEEDVDTSQVLYEWEQGFSQSFTQEQVA
       }
       try {
         const response = await fetch(
-          "http://127.0.0.1:5000/api/predict/sequence-string",
+          baseUrl + "/api/predict/sequence-string",
           {
             method: "POST",
             headers: {
@@ -537,7 +539,7 @@ MATQADLMELDMAMEPDRKAAVSHWQQQSYLDSGIHSGATTTAPSLSGKGNPEEEDVDTSQVLYEWEQGFSQSFTQEQVA
 
       try {
         const response = await fetch(
-          "http://127.0.0.1:5000/api/predict/sequence-file",
+          baseUrl + "/api/predict/sequence-file",
           {
             method: "POST",
             body: formData,
